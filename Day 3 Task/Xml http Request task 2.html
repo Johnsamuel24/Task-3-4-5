@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+    <link rel="stylesheet" href="task3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="d1"> Flags in Console</div>
+    <script>
+      
+      var xhr = new XMLHttpRequest();
+
+      
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+   
+      xhr.open(method, url);
+      
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+     
+          
+          
+
+          var countriesdetails = JSON.parse(xhr.responseText);
+          
+          
+          
+          for (var i = 0; i < countriesdetails.length; i++) {
+            console.log( "Flag       :",countriesdetails[i].flag);
+            console.log( "Flags URL  :",countriesdetails[i].flags.png);
+            
+          }
+        } else {
+         
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+     
+      xhr.send();
+    </script>
+  </body>
+</html>

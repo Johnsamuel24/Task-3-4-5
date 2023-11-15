@@ -1,0 +1,24 @@
+body{
+
+background-image: url('img2.jpg');
+background-position:50% 30%;
+background-repeat: no-repeat;
+background-size:cover;
+background-attachment:fixed;
+
+
+
+
+}
+
+.d1{
+      font-family: 'Times New Roman';
+      font-size: 50px;
+      text-align: center;
+
+      color: whitesmoke;
+      background-color: black;
+      opacity: 0.5;
+
+ padding: 20px;
+}
